@@ -33,35 +33,3 @@ def get_drinks():
   
 if __name__ == '__main__':
     app.run(debug=True)
-
-# from flask import Flask
-# from flask_sqlalchemy import SQLAlchemy
-# from sqlalchemy import Column, Integer, String
-# from sqlalchemy.ext.declarative import declarative_base
-
-# app = Flask(__name__)
-
-# app.config["SQLALCHEMY_DATABASE_URI"] = 'sqlite:///data.db'
-# db = SQLAlchemy(app)
-# Base = declarative_base()
-
-# class Drink(db.Model):
-#     id = Column(Integer, primary_key=True)
-#     name = Column(String(80), unique=True, nullable=False)
-#     description = Column(String(120))
-    
-#     def __repr__(self):
-#         return f'{self.name} - {self.description}'
-
-# @app.route('/')
-# def index():
-#     return 'Hello'
-
-# @app.route('/drinks')
-# def get_drinks():
-#     return {"drinks": "get drinks"}
-
-# if __name__ == '__main__':
-#     with app.app_context():
-#         db.create_all()
-#     app.run(debug=True)
